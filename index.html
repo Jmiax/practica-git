@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica de Git y GitHub</title>
+    <!-- Google Fonts: Outfit para títulos y Inter para texto general -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- Vinculación del archivo CSS externo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Tarjeta principal con efecto de vidrio (Glassmorphism) -->
+        <main class="card">
+            <div class="badge">🚀 Nivel: Principiante</div>
+            
+            <h1>Práctica de Git y GitHub</h1>
+            
+            <p class="description">
+                ¡Bienvenido/a a tu primer proyecto de control de versiones! Este es un sitio web de prueba 
+                diseñado especialmente para aprender y dominar los comandos fundamentales de Git. Aquí podrás 
+                practicar cómo inicializar un repositorio, hacer <code>commits</code>, crear <code>branches</code> (ramas), 
+                subir tu código a GitHub y colaborar mediante <code>pull requests</code>.
+            </p>
+
+            <!-- Sección interactiva para que el usuario practique modificando cosas -->
+            <div class="practice-box">
+                <h3>💡 ¡Tu turno de practicar!</h3>
+                <p>Para hacer tu primer commit de cambio, intenta editar el texto de este botón en el archivo <code>index.html</code> o cambiar el color de fondo en <code>styles.css</code>.</p>
+            </div>
+
+            <!-- Botón interactivo y decorativo -->
+            <button class="btn-primary" id="btn-practica" onclick="celebrate()">
+                <span>¡Hacer clic de prueba!</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </button>
+        </main>
+
+        <!-- Pie de página simple y elegante -->
+        <footer>
+            <p>Creado para la práctica de Git & GitHub • <span class="year">2026</span></p>
+            <p class="author-tag">💡 Modifica esta línea para agregar tu nombre como autor en un commit</p>
+        </footer>
+    </div>
+
+    <!-- Efecto simple al hacer clic en el botón -->
+    <script>
+        function celebrate() {
+            const btn = document.getElementById('btn-practica');
+            btn.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                btn.style.transform = 'scale(1)';
+            }, 100);
+            
+            // Un pequeño mensaje interactivo
+            alert('¡Excelente! El botón funciona. Ahora haz un cambio en el código, guárdalo y haz un "git commit" para registrar tu progreso. 🎉');
+        }
+    </script>
+</body>
+</html>
